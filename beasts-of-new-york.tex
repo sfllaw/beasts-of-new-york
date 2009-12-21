@@ -9,6 +9,11 @@
 \setulmargins{*}{*}{*}
 \checkandfixthelayout
 
+\aliaspagestyle{part}{empty}
+\aliaspagestyle{chapter}{empty}
+\pagestyle{myheadings}
+\renewcommand{\chaptermark}[1]{\markright {\itshape #1}}
+
 \makechapterstyle{ebook}{%
   \renewcommand{\printchaptername}{\hrule\vskip\onelineskip \centering}
   \renewcommand{\afterchapternum}{%
@@ -41,7 +46,9 @@
 
 \begin{document}
 
-\maketitle
+\begin{titlingpage}
+  \maketitle
+\end{titlingpage}
 
 
 \part{}
