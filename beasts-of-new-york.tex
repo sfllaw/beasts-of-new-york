@@ -1,4 +1,4 @@
-\documentclass[ebook,oneside,openany,12pt]{memoir}
+\documentclass[ebook,oneside,openany,17pt]{memoir}
 % Translation from RTF performed by UnRTF, version 0.19.2
 % For information about this marvellous program,
 % please go to http://www.gnu.org/software/unrtf/unrtf.html
@@ -20,24 +20,6 @@
 \renewcommand{\chaptermark}[1]{\markright {\itshape #1}}
 \renewcommand{\numberline}[1]{}
 
-\makechapterstyle{ebook}{%
-  \renewcommand{\printchaptername}{\hrule\vskip\onelineskip \centering}
-  \renewcommand{\afterchapternum}{%
-    \par\nobreak}
-  \renewcommand{\thechapter}{\Roman{chapter}}
-  \renewcommand{\printchaptertitle}[1]{%
-    \centering \chaptitlefont ##1}
-  \renewcommand{\afterchaptertitle}{%
-    \vskip\onelineskip \hrule\vskip \afterchapskip}
-}
-\chapterstyle{ebook}
-
-\newcounter{sections}
-\newcommand{\sections}[1]{%
-  \section*{#1}
-  \addtocounter{sections}{1}%
-  \pdfbookmark[1]{#1}{section.\thechapter.\thesections}}
-
 \usepackage{xltxtra}
 \defaultfontfeatures{
   Ligatures=Common,
@@ -49,12 +31,36 @@
   ItalicFont=ChaparralPro-Italic,
   BoldItalicFont=ChaparralPro-SemiboldIt
 ]{ChaparralPro-Regular}
+\newfontface\titlefont[
+  ExternalLocation=../../../fonts/,
+]{ChaparralPro-SemiboldDisp}
+\renewcommand{\HUGE}{\fontsize{27.5}{31}\selectfont}
+
+\makechapterstyle{ebook}{%
+  \renewcommand{\printchaptername}{\hrule\vskip\onelineskip \centering}
+  \renewcommand{\afterchapternum}{%
+    \par\nobreak}
+  \renewcommand{\thechapter}{\Roman{chapter}}
+  \renewcommand{\chapnumfont}{\normalfont\HUGE\bfseries\titlefont}
+  \let\chaptitlefont\chapnumfont
+  \renewcommand{\printchaptertitle}[1]{%
+    \centering \chaptitlefont ##1}
+  \renewcommand{\afterchaptertitle}{%
+    \vskip\onelineskip \hrule\vskip \afterchapskip}
+}
+\chapterstyle{ebook}
+
+\setsecheadstyle{\large\bfseries\raggedright\titlefont}
+\newcounter{sections}
+\newcommand{\sections}[1]{%
+  \section*{#1}
+  \addtocounter{sections}{1}%
+  \pdfbookmark[1]{#1}{section.\thechapter.\thesections}}
 
 \frenchspacing
 
 \usepackage{hyperref}
 \hypersetup{%
-  bookmarks=true,
   bookmarksopen=false,
   bookmarksnumbered=true,
   pdftitle={Beasts of New York},
