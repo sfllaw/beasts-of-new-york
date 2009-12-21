@@ -9,6 +9,18 @@
 \setulmargins{*}{*}{*}
 \checkandfixthelayout
 
+\makechapterstyle{ebook}{%
+  \renewcommand{\printchaptername}{\hrule\vskip\onelineskip \centering}
+  \renewcommand{\afterchapternum}{%
+    \par\nobreak}
+  \renewcommand{\printchapternum}{\chapnumfont \Roman{chapter}}
+  \renewcommand{\printchaptertitle}[1]{%
+    \centering \chaptitlefont ##1}
+  \renewcommand{\afterchaptertitle}{%
+    \vskip\onelineskip \hrule\vskip \afterchapskip}
+}
+\chapterstyle{ebook}
+
 \usepackage{xltxtra}
 \defaultfontfeatures{
   Ligatures=Common,
