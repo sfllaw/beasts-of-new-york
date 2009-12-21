@@ -3,8 +3,19 @@
 % For information about this marvellous program,
 % please go to http://www.gnu.org/software/unrtf/unrtf.html
 
-\usepackage[EU1]{fontenc}
-\usepackage{lmodern}
+\usepackage{xltxtra}
+\defaultfontfeatures{
+  Ligatures=Common,
+  Numbers=OldStyle,
+}
+\setmainfont[
+  ExternalLocation=../../../fonts/,
+  BoldFont=ChaparralPro-Semibold,
+  ItalicFont=ChaparralPro-Italic,
+  BoldItalicFont=ChaparralPro-SemiboldIt
+]{ChaparralPro-Regular}
+
+\frenchspacing
 
 \title{BEASTS OF NEW YORK\\a children’s book for grown-ups}
 \author{by Jon Evans}
