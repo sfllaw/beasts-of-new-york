@@ -77,6 +77,11 @@
 
 \frenchspacing
 
+\usepackage{color}
+\usepackage{graphicx}
+
+\usepackage[absolute]{textpos}
+
 \usepackage{hyperref}
 \hypersetup{%
   bookmarksopen=false,
@@ -93,9 +98,19 @@
 
 \frontmatter
 \begin{titlingpage}
+  \pagecolor{black}
+  \color{white}
+  \begin{textblock}{}(0,0)
+    \noindent\includegraphics{../../../images/head.png}
+  \end{textblock}
+  \begin{textblock}{}(7,10)
+    \noindent\includegraphics{../../../images/tail.png}
+  \end{textblock}
   \maketitle
 \end{titlingpage}
 
+\pagecolor{white}
+\normalcolor
 \mainmatter
 \tolerance=400
 
