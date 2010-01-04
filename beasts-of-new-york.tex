@@ -49,6 +49,7 @@
   ExternalLocation=../../../fonts/,
 ]{ChaparralPro-SemiboldDisp}
 \renewcommand{\HUGE}{\fontsize{27.5}{31}\selectfont}
+\newcommand{\Giant}{\fontsize{40}{44}\selectfont}
 
 \makechapterstyle{ebook}{%
   \renewcommand{\printchaptername}{\hrule\vskip\onelineskip \centering}
@@ -57,6 +58,9 @@
   \renewcommand{\thechapter}{\Roman{chapter}}
   \renewcommand{\chapnumfont}{\normalfont\HUGE\bfseries\titlefont}
   \let\chaptitlefont\chapnumfont
+  \renewcommand{\partnumfont}{\normalfont\Giant\bfseries\titlefont}
+  \let\partnamefont\partnumfont
+  \let\parttitlefont\partnumfont
   \renewcommand{\printchaptertitle}[1]{%
     \centering \chaptitlefont ##1}
   \renewcommand{\afterchaptertitle}{%
