@@ -49,6 +49,7 @@
   ExternalLocation=../../../fonts/,
 ]{ChaparralPro-SemiboldDisp}
 \renewcommand{\HUGE}{\fontsize{27.5}{31}\selectfont}
+\newcommand{\giant}{\fontsize{36}{40}\selectfont}
 \newcommand{\Giant}{\fontsize{40}{44}\selectfont}
 
 \makechapterstyle{ebook}{%
@@ -78,6 +79,8 @@
 \frenchspacing
 
 \usepackage{color}
+\definecolor{orange}{rgb}{1,0.5,0}
+
 \usepackage{graphicx}
 
 \usepackage[absolute]{textpos}
@@ -90,8 +93,12 @@
   pdfauthor={Jon Evans},
 }
 
-\title{BEASTS OF NEW YORK\\a children’s book for grown-ups}
-\author{by Jon Evans}
+\title{%
+  BEASTS \textcolor{orange}{OF NEW YORK}\\
+  \huge\hspace*{63pt}
+  A children’s book for grown-ups
+}
+\author{Jon Evans}
 \date{}
 
 \begin{document}
@@ -99,7 +106,13 @@
 \frontmatter
 \begin{titlingpage}
   \pagecolor{black}
-  \color{white}
+  \pretitle{\par\noindent\color{white}\titlefont\Giant}
+  \posttitle{\normalcolor{}}
+  \preauthor{%
+    \vspace*{330pt}\par\noindent\hspace*{225pt}%
+    \color{white}\titlefont\giant%
+  }
+  \postauthor{\normalcolor{}}
   \begin{textblock}{}(0,0)
     \noindent\includegraphics{../../../images/head.png}
   \end{textblock}
@@ -110,7 +123,6 @@
 \end{titlingpage}
 
 \pagecolor{white}
-\normalcolor
 \mainmatter
 \tolerance=400
 
