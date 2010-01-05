@@ -85,13 +85,16 @@
 
 \usepackage[absolute]{textpos}
 
-\usepackage{hyperref}
+\usepackage[colorlinks]{hyperref}
 \hypersetup{%
   bookmarksopen=false,
   bookmarksnumbered=true,
+  urlcolor=blue,
   pdftitle={Beasts of New York},
   pdfauthor={Jon Evans},
 }
+
+\urlstyle{rm}
 
 \title{%
   BEASTS \textcolor{orange}{OF NEW YORK}\\
@@ -123,6 +126,25 @@
 \end{titlingpage}
 
 \pagecolor{white}
+\thispagestyle{empty}
+\begin{center}
+  \vspace*{350pt}
+  Visit this book’s website:\\
+  \url{http://www.beastsofnewyork.com/}
+
+  \vspace*{1em}
+  \small
+  Copyright © 2007 by \href{http://www.rezendi.com/}{Jon Evans}\\
+  Some rights reserved.
+
+  \vspace*{1em}
+  This work is published under a Creative Commons License.\\
+  \tiny
+  \href{http://creativecommons.org/licenses/by-nc-nd/3.0/}{%
+    Attribution-Noncommercial-No Derivative Works 3.0 Unported%
+  }
+\end{center}
+
 \mainmatter
 \tolerance=400
 
@@ -12791,5 +12813,60 @@ stands, where the squirrels finally emerged into daylight.
 
 All of these places lie within the five boroughs of magnificent New
 York City.
+
+
+\backmatter
+
+\newpage
+\thispagestyle{empty}
+\section{Credits}
+\small
+
+Thanks to:
+
+\href{http://www.katewardtv.com/}{Kate Ward} for all her support and
+belief.
+
+Chelsea Watt and \href{http://www.elisakorenne.com/}{Elisa Korenne}
+for providing the NYC apartments in which I started and finished the
+book.
+
+Linda Tom for designing \href{http://www.elisakorenne.com/}{the
+  website}.
+
+\href{http://www.sarahlangan.com/}{Sarah Langan} for exploring the
+Croton Road with me.
+
+Maggie Cino and my sisters, Alison and Jennifer, for reading early
+versions.
+
+Julia Solis for her book \href{http://www.newyorkunderground.org/}{New
+  York Underground}.
+
+L.B. Deyo for his(?) book
+\href{http://www.amazon.com/Invisible-Frontier-Exploring-Tunnels-Rooftops/dp/0609809318/}{%
+  Invisible Frontier}.
+
+Temple Grandin for her book
+\href{http://www.grandin.com/inc/animals.in.translation.html}{%
+  Animals in Translation}.
+
+Robert Sullivan for his book
+\href{http://www.amazon.com/Rats-Observations-History-Unwanted-Inhabitants/dp/1582343853}{%
+  Rats: Observations on the History and Habitat of the City's Most
+  Unwanted Inhabitants}.
+
+Edwin G. Burrows and Mike Wallace for their book
+\href{http://www.amazon.com/Gotham-History-York-City-1898/dp/0195116348}{%
+  Gotham: A History of New York City to 1898}.
+
+\href{http://www.davewellington.net/}{David Wellington} and
+\href{http://www.antipope.org/charlie/}{Charles Stross} for their
+helpful advice.
+
+\href{http://sfllaw.ca/~sfllaw/}{Simon Law} for typesetting this PDF
+edition. (The
+\href{http://github.com/sfllaw/beasts-of-new-york}{\LaTeX{} source} is
+available on GitHub, for those who want to roll their own.)
 
 \end{document}
